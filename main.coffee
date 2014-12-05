@@ -8,7 +8,7 @@ class Sass
   render: ($) ->
     $$ = $.indents
     declaration = _.partial(sass.declaration, $.indents, @options.scssSyntax)
-    mixin = _.partial(sass.mixin, $.indents)
+    mixin = _.partial(sass.mixin, $.indents, @options.scssSyntax)
     comment = _.partial(sass.comment, $, @options.showTextSnippet)
     unit = _.partial(css.unit, @options.unit)
     convertColor = _.partial(sass.convertColor, @options)
